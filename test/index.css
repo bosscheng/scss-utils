@@ -12,6 +12,21 @@
 /**
 clearfix
  */
+/**
+推荐用法：
+
+.block{
+  color:red;
+
+  @include element(element){
+    color: green;
+
+    @include modifier(modifier){
+      color: blue;
+    }
+  }
+}
+ */
 .test-wrap .triangle-wrap > div {
   display: inline-block;
   -moz-user-select: none;
@@ -126,6 +141,16 @@ clearfix
 .test-wrap .text-vertical-align td {
   text-align: center;
   vertical-align: middle;
+}
+
+.block {
+  color: red;
+}
+.block__element {
+  color: green;
+}
+.block__element--modifier {
+  color: blue;
 }
 
 /*# sourceMappingURL=index.css.map */

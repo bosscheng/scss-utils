@@ -3,6 +3,7 @@
 @import "../src/respond-to";
 @import "../src/clearfix";
 @import "../src/user-select";
+@import "../src/BEM";
 
 .test-wrap {
   .triangle-wrap > div {
@@ -97,4 +98,19 @@
     }
   }
 
+}
+
+
+
+.block{
+
+  color:red;
+
+  @include element(element){
+    color: green;
+
+    @include modifier(modifier){
+      color: blue;
+    }
+  }
 }

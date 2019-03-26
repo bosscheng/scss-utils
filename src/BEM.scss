@@ -1,0 +1,33 @@
+@mixin element($name) {
+  $selector: &;
+
+  @at-root #{$selector}__#{$name} {
+    @content
+  }
+}
+
+//
+@mixin modifier($name) {
+  $selector: &;
+
+  @at-root #{$selector}--#{$name} {
+    @content
+  }
+}
+
+
+/**
+推荐用法：
+
+.block{
+  color:red;
+
+  @include element(element){
+    color: green;
+
+    @include modifier(modifier){
+      color: blue;
+    }
+  }
+}
+ */
