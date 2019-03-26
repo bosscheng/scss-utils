@@ -1,0 +1,17 @@
+// 垂直居中的一种方式
+// 水平居中，通过父级别元素设置 text-align:center 来实现。
+
+@mixin utils-vertical-center {
+  $selector: &;
+
+  // 选择器跳出
+  @at-root {
+    #{$selector}::after {
+      display: inline-block;
+      content: "";
+      height: 100%;
+      width: 0.1px;
+      vertical-align: middle;
+    }
+  }
+}

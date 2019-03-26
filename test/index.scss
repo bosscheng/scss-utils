@@ -1,0 +1,100 @@
+@import "../src/triangle";
+@import "../src/currency";
+@import "../src/respond-to";
+@import "../src/clearfix";
+@import "../src/user-select";
+
+.test-wrap {
+  .triangle-wrap > div {
+    display: inline-block;
+    @include utils-user-select();
+  }
+
+  .test-triangle-left {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #ccc;
+
+    &::before {
+      left: -6px;
+      top: 0;
+      @include utils-triangle('left', 6px, red);
+    }
+  }
+
+  .test-triangle-up {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #ccc;
+
+    &::before {
+      right: 0px;
+      top: -6px;
+      @include utils-triangle('up', 6px, red);
+    }
+  }
+
+  .test-triangle-right {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #ccc;
+
+    &::before {
+      right: -6px;
+      top: 0;
+      @include utils-triangle('right', 6px, red);
+    }
+  }
+
+
+  .test-triangle-down {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #ccc;
+
+    &::before {
+      right: 0px;
+      bottom: -6px;
+      @include utils-triangle('down', 6px, red);
+    }
+  }
+
+  // 越过上层
+  @at-root .test-currency {
+    @include utils-currency('\20AC');
+  }
+
+
+  //
+  .test-respond-to {
+    @include utils-clearfix();
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ccc;
+    @include utils-respondTo('desktop') {
+      background-color: red;
+    }
+  }
+
+
+  .text-vertical-align {
+
+    table {
+      width: 100%;
+    }
+
+    tr {
+      height: 40px;
+    }
+
+    td {
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+}

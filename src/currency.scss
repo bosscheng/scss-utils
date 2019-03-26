@@ -1,0 +1,15 @@
+/**
+  currency 货币
+ */
+@mixin utils-currency($type:'$') {
+  $selector: &;
+  position: relative;
+
+  @at-root {
+    #{$selector}::before {
+      content: $type;
+      position: relative;
+      left: 0;
+    }
+  }
+}

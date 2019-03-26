@@ -1,0 +1,31 @@
+/**
+  类似于媒体查询 对于不同屏幕尺寸的设置
+  针对于不同尺寸的处理方案。
+ */
+
+
+$smartPhone: 480px;
+$tabletPortrait: 767px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
+@mixin utils-respondTo($media) {
+
+  @if ($media == 'smartphone') {
+    @media screen and (max-width: $smartPhone) {
+      @content;
+    }
+  } @else if $media == 'tablet' {
+    @media screen and (min-width: $tabletPortrait) and (max-width: $tabletLandscape) {
+      @content;
+    }
+  } @else if $media == 'smallScreen' {
+    @media screen and (max-width: $desktop) {
+      @content;
+    }
+  } @else if $media == 'desktop' {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+}

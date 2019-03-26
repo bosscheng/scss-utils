@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/**
+  $direction: up,down,left,right
+ */
+/**
+  currency 货币
+ */
+/**
+  类似于媒体查询 对于不同屏幕尺寸的设置
+  针对于不同尺寸的处理方案。
+ */
+/**
+clearfix
+ */
+.test-wrap .triangle-wrap > div {
+  display: inline-block;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.test-wrap .test-triangle-left {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+.test-wrap .test-triangle-left::before {
+  left: -6px;
+  top: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-right: 6px solid red;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.test-wrap .test-triangle-up {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+.test-wrap .test-triangle-up::before {
+  right: 0px;
+  top: -6px;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 6px solid red;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.test-wrap .test-triangle-right {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+.test-wrap .test-triangle-right::before {
+  right: -6px;
+  top: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 6px solid red;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.test-wrap .test-triangle-down {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+.test-wrap .test-triangle-down::before {
+  right: 0px;
+  bottom: -6px;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 6px solid red;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.test-currency {
+  position: relative;
+}
+.test-currency::before {
+  content: "€";
+  position: relative;
+  left: 0;
+}
+.test-wrap .test-respond-to {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+.test-wrap .test-respond-to::before,
+.test-wrap .test-respond-to::after {
+  display: table;
+  content: "";
+}
+
+.test-wrap .test-respond-to::after {
+  clear: both;
+}
+@media screen and (min-width: 1174px) {
+  .test-wrap .test-respond-to {
+    background-color: red;
+  }
+}
+.test-wrap .text-vertical-align table {
+  width: 100%;
+}
+.test-wrap .text-vertical-align tr {
+  height: 40px;
+}
+.test-wrap .text-vertical-align td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=index.css.map */
