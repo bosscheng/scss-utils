@@ -1,4 +1,4 @@
-@mixin element($name) {
+@mixin utils-element($name) {
   $selector: &;
 
   @at-root #{$selector}__#{$name} {
@@ -7,7 +7,7 @@
 }
 
 //
-@mixin modifier($name) {
+@mixin utils-modifier($name) {
   $selector: &;
 
   @at-root #{$selector}--#{$name} {
@@ -22,10 +22,10 @@
 .block{
   color:red;
 
-  @include element(element){
+  @include utils-element(element){
     color: green;
 
-    @include modifier(modifier){
+    @include utils-modifier(modifier){
       color: blue;
     }
   }
