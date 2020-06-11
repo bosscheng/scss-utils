@@ -1,0 +1,7 @@
+@mixin utils-hideText() {
+  font: 0/0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

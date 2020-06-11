@@ -1,0 +1,4 @@
+@mixin utils-opacity($opacity:50) {
+  opacity: $opacity/100;
+  filter: alpha(opacity=$opacity);
+}

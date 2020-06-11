@@ -1,0 +1,5 @@
+@mixin utils-disabled($bgColor: #e6e6e6,$textColor:#ababab) {
+  background-color: $bgColor !important;
+  color: $textColor !important;
+  cursor: not-allowed !important;
+}
