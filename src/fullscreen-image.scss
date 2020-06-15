@@ -1,0 +1,6 @@
+@mixin utils-fullscreen-images($url) {
+  width: 100vw;
+  height: 100vh;
+  background: url($url) no-repeat 50% 50%;
+  background-size: cover;
+}
